@@ -1,20 +1,40 @@
-# AI-Powered Healthcare & Medicine Quality Website
+MediSafe — AI-Powered Healthcare & Medicine Quality
 
-Ensuring access to quality healthcare and authentic medicines is a 
-significant challenge, especially in rural areas where delayed diagnosis, 
-improper treatment, and substandard medicines pose serious health 
-risks. This project aims to develop an AI-powered web application that 
-assists users in verifying medicine quality and predicting diseases 
-based on symptoms, making healthcare more accessible and reliable. 
-The system provides two key features: a Medicine Quality Checker, 
-where users can enter a medicine’s name or ingredients to verify its 
-authenticity, cross-checking information with medical databases to 
-detect low-quality or unsafe medicines while suggesting safer 
-alternatives; and a Disease Prediction & Medicine Recommendation 
-tool, which allows users to input symptoms and receive AI-based 
-predictions of possible diseases. The system then provides treatment 
-recommendations based on Ayurveda, Homeopathy, or Allopathy, 
-enabling users to choose their preferred medical approach. By offering 
-accurate medical insights, ensuring safe medicine consumption, and 
-improving healthcare accessibility, this solution empowers individuals 
-to make informed health decisions and enhances overall well-being. 
+Objective
+To provide an accessible web application that:
+- Verify medicine authenticity and quality from name, ingredients, or packaging.
+- Predict possible diseases from user-reported symptoms and recommend medicines across Ayurveda, Homeopathy, and Allopathy.
+
+Dataset
+- Medicine databases and regulatory drug registries (name, ingredients, packaging images).
+- Symptom-to-disease datasets and clinical symptom corpora for disease prediction.
+- Data preprocessing includes normalization, tokenization, image resizing, and augmentation.
+
+Models Implemented
+- Transformer-based NLP (e.g., BERT) for symptom → disease prediction
+- CNN (Transfer Learning, e.g., MobileNetV2) for medicine packaging and quality verification
+- Hybrid retrieval + classification pipeline for medicine authenticity and alternative suggestions
+- Rule-based knowledge system for cross-checking regulatory information
+
+Evaluation Metrics
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- Confusion Matrix
+- AUC (where applicable)
+
+Results
+Preliminary validation shows promising performance on internal test sets; further clinical and field validation is required before deployment.
+
+Tools & Technologies
+- Python
+- TensorFlow / Keras, Hugging Face Transformers
+- PyTorch (exploratory)
+- Scikit-learn
+- FastAPI / Flask (backend)
+- React (frontend)
+- Docker
+
+Conclusion
+Hybrid AI models combining NLP, computer vision, and domain knowledge can improve access to reliable medicine verification and symptom-based disease guidance, but require rigorous validation for safe clinical use.
